@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'django.contrib.gis',
     'coreapp',
-    'drf_yasg'
+    'drf_yasg',
+    'health_check',
 ]
 
 MIDDLEWARE = [

@@ -5,5 +5,5 @@ module "my-ecr" {
 
 module "my-lightsail" {
   source                  = "./modules/lightsail"
-  repository_uri          = module.my-ecr.repository_uri
+  repository_url          = module.my-ecr.repository_url
 }

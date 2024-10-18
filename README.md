@@ -11,6 +11,7 @@ Ensure before executing the project to have the following dependencies installed
 - Python-pip
 - Python venv
 - Docker (PostgreSQL with PostGIS extension)
+- Aws cli (for publishing the application)
 
 > **Note**: It's also needed to setup the OS to be able to handle geolocalization features.
 > For Debian users you can install the dependencies by running the following command:
@@ -63,6 +64,22 @@ To run the tests, use the following command:
 
 ```bash
 make test
+```
+
+5. Publish the application
+
+First build locally the application:
+
+```bash
+make build-local
+```
+
+Now use terraform to create ECR on AWS (insider the `deploy` folder) and then push the image to the ECR with the folloging commands:
+
+```bash
+ aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com
+ docker tag django-app:latest $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/django-app:latest
+ docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/django-app:latest
 ```
 
 5. Clean Up
