@@ -56,7 +56,8 @@ Start the Django development server:
 
 ```bash
 make run
-# Swagger available at the app at http://127.0.0.1:8000/swagger.
+# Health check available at  http://127.0.0.1:8000/ht.
+# Swagger available at http://127.0.0.1:8000/swagger.
 ```
 
 4. Run Tests

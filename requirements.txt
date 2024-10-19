@@ -8,3 +8,5 @@ gunicorn==20.1.0
 dj-database-url
 whitenoise
 django-health-check
+django-ratelimit
+redis[hiredis]
