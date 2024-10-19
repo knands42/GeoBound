@@ -74,7 +74,7 @@ First build locally the application:
 make build-local
 ```
 
-Now use terraform to create ECR on AWS (insider the `deploy` folder) and then push the image to the ECR with the folloging commands:
+Now use terraform to create ECR on AWS inside the `deploy` folder and then push the local image to the ECR with the folloging commands:
 
 ```bash
  aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com
