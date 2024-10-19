@@ -83,6 +83,12 @@ Now use terraform to create ECR on AWS inside the `deploy` folder and then push 
  docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/django-app:latest
 ```
 
+You can also execute locally inside a container after the generated build above the following command:
+
+```bash
+make run-container
+```
+
 5. Clean Up
 To clean up the project (remove the virtual environment), run the following:
 
@@ -90,8 +96,8 @@ To clean up the project (remove the virtual environment), run the following:
 make clean
 ```
 
-## Additional Commands
+## Production
 
-`make migrate`: Apply database migrations </br>
-`make seed`: Load initial data (seed the database). </br>
-`make run_with_logs`: Run the server and output logs to server.log.
+A production version of this project can be found here: [GeoBound](https://django-app.gbayc89z4tg4a.us-east-1.cs.amazonlightsail.com/swagger/).
+
+It uses Amazon Lightsail to host the application, self managed the database and pull the image from ECR.

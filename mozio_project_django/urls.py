@@ -31,7 +31,7 @@ schema_view = get_schema_view(
         contact=openapi.Contact(email="email@email.com"),
         license=openapi.License(name="BSD License"),
     ),
-    url=os.environ.get('API_URL', 'http://127.0.0.1:8000'),
+    url=os.environ.get('API_URL', 'http://localhost:8000'),
     public=True,
     permission_classes=(permissions.AllowAny,),
 )

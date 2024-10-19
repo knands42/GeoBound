@@ -9,4 +9,5 @@ dj-database-url
 whitenoise
 django-health-check
 django-ratelimit
-redis[hiredis]
+# redis
+# hiredis

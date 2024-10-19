@@ -29,7 +29,7 @@ build-local:
 	docker build -t django-app:latest .
 
 # Run the application in a container (works for both windows and linux)
-execute-local:
+run-container:
 	docker run -e DB_HOST=host.docker.internal -p 8000:8000 --add-host=host.docker.internal:host-gateway django-app
 
 # Set up the application (install, migrate, seed)
