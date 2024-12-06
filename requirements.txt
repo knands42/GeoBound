@@ -1,4 +1,4 @@
-Django==5.1.2
+Django==5.1.4
 djangorestframework
 djangorestframework-gis
 setuptools==75.2.0
